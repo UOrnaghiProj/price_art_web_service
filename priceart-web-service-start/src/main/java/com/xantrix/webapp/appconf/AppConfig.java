@@ -4,18 +4,17 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties("application")
-public class AppConfig
-{
+@ConfigurationProperties("applicazione")
+public class AppConfig{
+	
 	private String listino;
 
-	public String getListino()
-	{
+	public String getListino() {
 		return listino;
 	}
 
-	public void setListino(String Listino)
-	{
-		this.listino = Listino;
+	public void setListino(String listino) {
+		this.listino = listino;
 	}
+	
 }

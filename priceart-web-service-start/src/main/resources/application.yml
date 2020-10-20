@@ -3,7 +3,7 @@ server:
  
 spring:
   profiles:
-    active: list2
+    active: list1
 # ==============================================================
 # = Proprietà Fonte Dati PostgreSQL
 # ==============================================================
@@ -11,7 +11,7 @@ spring:
     initialization-mode: always
     password: 123_Stella
     platform: postgres
-    url: jdbc:postgresql://localhost:5433/AlphaShop
+    url: jdbc:postgresql://localhost:5433/Shop
     username: postgres
   jpa:
     hibernate:
