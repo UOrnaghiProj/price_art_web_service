@@ -42,3 +42,25 @@ sicurezza:
     prefix: Bearer 
     expiration: 86400
     secret: 123_Stella
+    
+# ==============================================================
+# = ACTUATOR PARAMETERS
+# ==============================================================
+management:
+  endpoint:
+    health:
+      show-details: WHEN_AUTHORIZED
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+        
+# ==============================================================
+# = ACTUATOR INFO
+# ==============================================================
+info:
+  assistenza:
+    nome: "Umberto Ornaghi"
+    mail: "umberto.ornaghi@gmail.com"
+  nome:
+    nome-app: "priceArt web service con JWT"

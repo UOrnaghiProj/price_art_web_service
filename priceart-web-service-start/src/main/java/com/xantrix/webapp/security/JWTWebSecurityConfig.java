@@ -56,10 +56,10 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter
 		return super.authenticationManagerBean();
 	}
 	
-	private static final String[] NOAUTH_MATCHER = {"/api/articoli/noauth/**"};
-	private static final String[] USER_MATCHER = { "/api/articoli/cerca/**"};
-	private static final String[] ADMIN_MATCHER = { "/api/articoli/inserisci/**", 
-			"/api/articoli/modifica/**", "/api/articoli/elimina/**" };
+	private static final String[] NOAUTH_MATCHER = {"/api/prezzi/noauth/**","/v2/api-docs","/**"};
+	private static final String[] USER_MATCHER = { "/api/prezzi/**", "/api/listino/cerca/**", "/info"};
+	private static final String[] ADMIN_MATCHER = { "/api/listino/inserisci/**", 
+			"/api/prezzi/elimina/**", "/api/listino/elimina/**" };
 	
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception 
@@ -70,9 +70,9 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and()
 		.authorizeRequests()
-		.antMatchers(NOAUTH_MATCHER).permitAll() //End Point che non richiede autenticazione
-		.antMatchers(USER_MATCHER).hasAnyRole("USER")
 		.antMatchers(ADMIN_MATCHER).hasAnyRole("ADMIN")
+		.antMatchers(USER_MATCHER).hasAnyRole("USER")
+		.antMatchers(NOAUTH_MATCHER).permitAll() //End Point che non richiede autenticazione
 		.anyRequest().authenticated();
 		
 		httpSecurity.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
