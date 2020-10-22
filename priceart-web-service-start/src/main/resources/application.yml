@@ -2,8 +2,13 @@ server:
   port: 5071
  
 spring:
-  profiles:
-    active: list1
+  application:
+    name: PriceArtWebService
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: list2
+      
 # ==============================================================
 # = Proprietà Fonte Dati PostgreSQL
 # ==============================================================
