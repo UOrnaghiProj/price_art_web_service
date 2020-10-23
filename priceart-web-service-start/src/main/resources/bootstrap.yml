@@ -8,6 +8,10 @@ spring:
     config:
       uri: http://localhost:8888
       profile: list2
+      username: user
+      password: password
+      #configurazione in caso si vuole utilizzare un branch diverso dal master
+      #label: {nome del branch}
       
 # ==============================================================
 # = Proprietà Fonte Dati PostgreSQL
