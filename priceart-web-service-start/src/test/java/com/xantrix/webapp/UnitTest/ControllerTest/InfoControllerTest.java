@@ -23,7 +23,7 @@ import org.springframework.web.context.WebApplicationContext;
 import com.xantrix.webapp.Application;
  
 
-@TestPropertySource(locations="classpath:application-list100.properties")
+@TestPropertySource(properties= {"profilo = list100", "seq = 1"})
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
 @SpringBootTest

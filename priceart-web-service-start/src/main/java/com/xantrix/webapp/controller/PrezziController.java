@@ -59,7 +59,12 @@ public class PrezziController
 		if (prezzo != null)
 		{
 			logger.info("Prezzo Articolo: " + prezzo.getPrezzo());
-			retVal = prezzo.getPrezzo();
+			
+			double sconto = Config.getSconto();
+			if(sconto > 0)
+				logger.info("Attivato lo sconto: " + sconto + "%");
+			
+			retVal = prezzo.getPrezzo()*(1-(sconto/100));
 		}
 		else
 		{

@@ -20,10 +20,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 //@TestPropertySource(locations="classpath:application-list1.properties")
+@TestPropertySource(properties= {"profilo = list1", "seq = 1"})
 @RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = Application.class)
 @SpringBootTest
