@@ -9,7 +9,6 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import com.xantrix.webapp.entity.DettListini;
-import com.xantrix.webapp.entity.Listini;
 import com.xantrix.webapp.repository.PrezziRepository;
 
 @Service
