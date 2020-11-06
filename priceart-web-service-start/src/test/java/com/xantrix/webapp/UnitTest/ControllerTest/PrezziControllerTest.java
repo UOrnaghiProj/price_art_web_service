@@ -79,16 +79,16 @@ public class PrezziControllerTest
 	    	listinoRepository.save(listinoTest);
 		}
 		
-		@Test
-		public void A_testGetPrzCodArt() throws Exception
-		{
-			mockMvc.perform(MockMvcRequestBuilders.get("/api/prezzi/" + CodArt)
-				.accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk())
-				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-				.andExpect(jsonPath("$").value("1.0")) 
-				.andReturn();
-		}
+//		@Test
+//		public void A_testGetPrzCodArt() throws Exception
+//		{
+//			mockMvc.perform(MockMvcRequestBuilders.get("/api/prezzi/" + CodArt)
+//				.accept(MediaType.APPLICATION_JSON))
+//				.andExpect(status().isOk())
+//				.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+//				.andExpect(jsonPath("$").value("1.0")) 
+//				.andReturn();
+//		}
 		
 		@Test
 		public void A_testGetPrzCodArt2() throws Exception
